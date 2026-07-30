@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee To-Do List Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header-card">
+            <div class="profile-section">
+                <i class="fa-solid fa-user-gear profile-icon"></i>
+                <div class="profile-info">
+                    <h2 id="user-name">Dzian Salisa</h2>
+                    <p id="user-role">Software Engineer</p>
+                    <button id="btn-edit-profile" class="btn-sm"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+                </div>
+            </div>
+            <div class="time-section">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span id="current-time">Loading date...</span>
+            </div>
+        </header>
+
+        <section class="input-card">
+            <h3>Add New Agenda</h3>
+            <div class="form-group">
+                <label for="task-input">Task:</label>
+                <textarea id="task-input" placeholder="Write your task here..." rows="3"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="priority-select">Priority Level:</label>
+                    <select id="priority-select">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-group half">
+                    <label for="due-date-input">Due Date:</label>
+                    <input type="date" id="due-date-input">
+                </div>
+            </div>
+
+            <button id="btn-submit" class="btn btn-primary">
+                <i class="fa-solid fa-plus"></i> Submit Task
+            </button>
+        </section>
+
+        <div class="action-bar">
+            <h3>To-Do List</h3>
+            <button id="btn-delete-all" class="btn btn-danger">
+                <i class="fa-solid fa-trash-can"></i> Delete All
+            </button>
+        </div>
+
+        <section class="list-section">
+            <h4><i class="fa-solid fa-list-check"></i> To Do List</h4>
+            <ul id="todo-list" class="task-list">
+            </ul>
+        </section>
+
+        <section class="list-section done-section">
+            <h4><i class="fa-solid fa-circle-check"></i> DONE</h4>
+            <ul id="done-list" class="task-list">
+            </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
